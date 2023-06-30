@@ -10,6 +10,13 @@
       margin: 0;
       padding: 0;
       overflow: hidden;
+      animation: bgAnimation 10s linear infinite;
+    }
+
+    @keyframes bgAnimation {
+      0% { background-color: black; }
+      50% { background-color: pink; }
+      100% { background-color: black; }
     }
     canvas {
       position: fixed;
@@ -22,6 +29,13 @@
       text-align: center;
       font-size: 48px;
       margin-top: 100px;
+      animation: textAnimation 2s linear infinite;
+    }
+
+    @keyframes textAnimation {
+      0% { text-shadow: none; }
+      50% { text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red; }
+      100% { text-shadow: none; }
     }
     #input-container {
       position: absolute;
