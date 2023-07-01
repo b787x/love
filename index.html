@@ -213,16 +213,22 @@
       
       if (name == "CXK" || name == "蔡徐坤" || name == "CTRL" || name =="cxk" || name == "ctrl" || name == "你干吗啊~") {
   alert("小黑子，露出鸡脚了吧");
-
-  // 创建 <img> 元素
   var img = document.createElement("img");
-
-  // 设置图片路径和描述文字
   img.src = "picture/1.jpg";
   img.alt = "你好烦~~~~~";
-
-  // 将 <img> 元素添加到页面中适当的位置
   document.body.appendChild(img);
+  var header = document.getElementById("header");
+  header.style.position = "fixed";
+  header.style.top = "0";
+  header.style.left = "0";
+  header.style.width = "100%";
+  header.style.zIndex = "9999";
+
+  var imgInHeader = document.querySelector("#header > img");
+  imgInHeader.style.position = "relative";
+  imgInHeader.style.top = "50px";
+  imgInHeader.style.left = "20%";
+  imgInHeader.style.opacity = "0.8";
 
   return;
 }
