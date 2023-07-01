@@ -213,10 +213,12 @@
       
       if (name == "CXK" || name == "蔡徐坤" || name == "CTRL" || name =="cxk" || name == "ctrl" || name == "你干吗啊~") {
   alert("小黑子，露出鸡脚了吧");
+
   var img = document.createElement("img");
   img.src = "picture/2.jpg";
   img.alt = "你好烦~~~~~";
   document.body.appendChild(img);
+
   var header = document.getElementById("header");
   header.style.position = "fixed";
   header.style.top = "0";
@@ -230,11 +232,14 @@
   imgInHeader.style.top = "50px";
   imgInHeader.style.left = "0%";
   imgInHeader.style.opacity = "0.8";
+
   setTimeout(function() {
     document.body.removeChild(img);
-  }, 3000);
+  }, 3000); // 3秒后执行移除图片操作
 
   return;
+}
+
 }
 
       const messageContainer = document.getElementById("message-container");
