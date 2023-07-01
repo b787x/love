@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>表白墙</title>
+  <link rel="icon" href="image/r.ico" type="image/x-icon">
   <style>
     body {
       background-color: black;
@@ -204,7 +205,7 @@
       "亲爱的{name}，你的笑容是我心中永恒的阳光。",
       "{name}，我希望能与你携手共度余生。",
       "亲爱的{name}，你是我心中的宝藏。",
-      "和你在一起的每一天都是独特而美好的，亲爱的{name}。"
+      "和你在一起的每一天都是独特而美好的，亲爱的{name}。",
     ];
 
     function startConfession() {
@@ -212,6 +213,10 @@
       
       if (name === "") {
         alert("请输入对象的名字");
+        return;
+      }
+      if (name == "CXK"||name == "蔡徐坤"||name == "CTRL"||name =="cxk"||name=="ctrl"||name == "你干吗啊~"){
+        alert("小黑子，露出鸡脚了吧");
         return;
       }
 
