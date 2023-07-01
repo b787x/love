@@ -218,25 +218,22 @@
       if (name == "CXK"||name == "蔡徐坤"||name == "CTRL"||name =="cxk"||name=="ctrl"||name == "你干吗啊~"){
         alert("小黑子，露出鸡脚了吧");
         var img = document.createElement("img");
-img.src = "picture/2.jpg";
-img.alt = "你好烦~~~~~";
+        img.src = "picture/2.jpg";
+        header.style.position = "fixed";
+        header.style.top = "0";
+        header.style.left = "0";
+        header.style.width = "100%";
+        header.style.height = "100vh";
+        header.style.zIndex = "9999";
 
-var header = document.getElementById("header");
-header.style.position = "fixed";
-header.style.top = "0";
-header.style.left = "0";
-header.style.width = "100%";
-header.style.height = "100vh";
-header.style.zIndex = "9999";
+        header.appendChild(img);
 
-header.appendChild(img);
-
-setTimeout(function() {
-  var imgInHeader = document.querySelector("#header > img");
-  if (imgInHeader) {
-    imgInHeader.parentNode.removeChild(imgInHeader);
-  }
-}, 3000);
+        setTimeout(function() {
+          var imgInHeader = document.querySelector("#header > img");
+          if (imgInHeader) {
+            imgInHeader.parentNode.removeChild(imgInHeader);
+          }
+        }, 3000);
 
         return;
       }
