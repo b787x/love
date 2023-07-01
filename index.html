@@ -219,6 +219,9 @@
         alert("小黑子，露出鸡脚了吧");
         var img = document.createElement("img");
         img.src = "picture/2.jpg";
+
+        var header = document.getElementById("header"); // 假设标题栏元素的 ID 是 "header"
+
         header.style.position = "fixed";
         header.style.top = "0";
         header.style.left = "0";
@@ -234,7 +237,6 @@
             imgInHeader.parentNode.removeChild(imgInHeader);
           }
         }, 3000);
-
         return;
       }
 
