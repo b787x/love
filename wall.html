@@ -2,7 +2,8 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Cool Styles</title>
+  <title>LIST</title>
+  <link rel="icon" href="image/r.ico" type="image/x-icon">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
@@ -96,12 +97,31 @@
       }
     }
   </style>
+  <script type="text/javascript" src='marked.min.js'></script>
+  <script>
+    //导入marked库加载markdown文件//use marked to load markdown files
+    //用xmlhttp加载文件//use xmlhttp to load file
+    function loadHTML() {
+      var xmlhttp;
+      if (window.XMLHttpRequest){
+        xmlhttp = new XMLHttpRequest();
+      }else{
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      xmlhttp.onreadystatechange = function(){
+        if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+          document.getElementById("message").innerHTML = marked.parse(xmlhttp.responseText);//把id为message的div的内容替换掉
+      }
+    };
+    xmlhttp.open("GET","data/test.md",true);//GET后面就是文件目录
+    xmlhttp.send();
+  }
+  </script>
 </head>
 <body>
-  <div class="message">
-    这是index里的句子！
+  <div class="message" id="message">
+    <script>loadHTML()</script>
   </div>
-
   <button id="return-button">返回</button>
 
   <script>
