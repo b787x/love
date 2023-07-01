@@ -230,6 +230,9 @@
   imgInHeader.style.top = "50px";
   imgInHeader.style.left = "0%";
   imgInHeader.style.opacity = "0.8";
+  setTimeout(function() {
+    document.body.removeChild(img);
+  }, 3000);
 
   return;
 }
